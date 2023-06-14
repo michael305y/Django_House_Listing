@@ -37,7 +37,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -87,12 +87,30 @@ WSGI_APPLICATION = 'real_estate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+### SQLite DB
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+# # POSTGRES DB details
+# import dj_database_url
+
+# DATABASES = {
+#     'default' : dj_database_url.parse('postgresql://postgres:oKlFZK4yQA9JTn7FKllW@containers-us-west-12.railway.app:7573/railway')
+# }
+
+
+# MySQL DB details
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default' : dj_database_url.parse('mysql://root:HajgjHFrNj8FCEwTDx2f@containers-us-west-192.railway.app:7742/railway')
 }
+
 
 
 # Password validation
