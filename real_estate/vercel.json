@@ -3,7 +3,7 @@
 
     "builds": [
       {
-        "src": "real_estate/wsgi.py",
+        "src": "Django_House_Listing/wsgi.py",
         "use": "@vercel/python",
         "config":	{
         "maxLambdaSize":"15mb", 
@@ -15,7 +15,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "real_estate/wsgi.py"
+        "dest": "Django_House_Listing/wsgi.py"
       }
      ]
      
