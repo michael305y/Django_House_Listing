@@ -96,7 +96,7 @@ DATABASES = {
 }
 
 
-# # POSTGRES DB details
+# # VERCEL POSTGRES DB details
 # import dj_database_url
 
 # DATABASES = {
@@ -104,12 +104,13 @@ DATABASES = {
 # }
 
 
-# # MySQL DB details
-# import dj_database_url
+# RENDER POSTGRES DB details
+import dj_database_url
 
-# DATABASES = {
-#     'default' : dj_database_url.parse('mysql://root:HajgjHFrNj8FCEwTDx2f@containers-us-west-192.railway.app:7742/railway')
-# }
+DATABASES = {
+    'default' : dj_database_url.parse('postgres://real_estate_so32_user:0eXEfJdLn3xMQaID7wf333QmWXYXolAA@dpg-ci64b6enqql3q386d8ng-a.oregon-postgres.render.com/real_estate_so32')
+}
+
 
 
 
